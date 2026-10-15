@@ -45,7 +45,18 @@ https://harsh-azure-web-app-2026.azurewebsites.net/
 - Deployment configuration and application files were inspected through Azure tools.
 
 ## Screenshots
-Project screenshots will be added to the `screenshots/` directory.
+
+1. Azure App Service Overview
+
+<img width="1917" height="927" alt="app overview" src="https://github.com/user-attachments/assets/9274a13d-23d5-42e2-9d47-50805afe63e4" />
+
+2. Deployed Application Homepage
+
+<img width="1917" height="1018" alt="live application hoempage" src="https://github.com/user-attachments/assets/9bede776-223b-4583-b84c-ad6ae9ca1603" />
+
+3. Application Health Check
+   <img width="1917" height="1007" alt="health-endpoints" src="https://github.com/user-attachments/assets/67aeb862-032b-4cf9-94f4-ab5c35110a4d" />
+
 
 ## Key Learning Outcomes
 - Deploying Python applications to Azure App Service.
