@@ -72,3 +72,61 @@ https://harsh-azure-web-app-2026.azurewebsites.net/
 
 ## Disclaimer
 This project is intended for learning and portfolio development. Resource availability and pricing may change. Verify Azure pricing before changing the hosting plan.
+
+
+---
+
+## Project : Azure CI/CD with GitHub Actions
+
+### Objective
+Automate the deployment of a Python Flask web application to Azure App Service using GitHub Actions and secure OpenID Connect (OIDC) authentication.
+
+### Architecture
+
+Developer → GitHub Repository → GitHub Actions Workflow → Azure Login (OIDC) → Azure App Service → Live Flask Application
+
+### Technologies Used
+- Microsoft Azure App Service (F1 Free Plan)
+- GitHub Actions
+- GitHub
+- Python 3.12
+- Flask
+- Azure CLI
+- Microsoft Entra ID
+- OpenID Connect (OIDC)
+
+### Implementation
+1. Used the existing Flask application and Azure App Service.
+2. Created a GitHub Actions workflow at `.github/workflows/azure-deploy.yml`.
+3. Configured workflow triggers for pushes to the `main` branch and manual execution.
+4. Configured OIDC authentication between GitHub Actions and Microsoft Entra ID.
+5. Assigned the `Website Contributor` role at the App Service scope.
+6. Installed Python dependencies and packaged `app.py` and `requirements.txt`.
+7. Deployed the package to Azure App Service using Azure CLI.
+8. Verified the deployment through the live application endpoints.
+
+### Security
+- Used OIDC federation instead of a stored Azure client secret or publish profile.
+- Configured a federated credential for the repository's `main` branch.
+- Restricted the deployment identity's role assignment to the target App Service.
+
+### Verification Results
+- GitHub Actions workflow: Successful
+- Azure authentication: Successful
+- Azure App Service deployment: Successful
+- `/health` endpoint: Returns healthy JSON
+- `/info` endpoint: Returns application and platform information
+
+### Skills Demonstrated
+- CI/CD pipeline configuration
+- GitHub Actions automation
+- Azure App Service deployment
+- Microsoft Entra ID application and service principal configuration
+- OIDC workload identity federation
+- Azure role-based access control (RBAC)
+- Python application packaging and deployment
+- Post-deployment verification
+
+### Outcome
+Implemented and verified an automated deployment pipeline that publishes a Flask application to Azure App Service when changes are pushed to the `main` branch, with a manual deployment option.
+
